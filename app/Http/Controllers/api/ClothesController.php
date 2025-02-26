@@ -4,6 +4,9 @@ namespace App\Http\Controllers\api;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Http\Models\Brand;
+use App\Http\Models\Material;
+use App\Http\Models\Type;
 
 
 class ClothesController extends Controller
@@ -16,7 +19,7 @@ class ClothesController extends Controller
     public function getCloth( Request $request ){
         $cloth = Cloth::where( "ruha", $request[ "ruha" ])->first();
 
-        return $this->sendResponse( new ClotchResource( $cloth ), "Betöltve" );
+        return $this->sendResponse( new ClothResource( $cloth ), "Betöltve" );
     }
 
     public function isAdmin() {
