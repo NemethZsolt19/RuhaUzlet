@@ -20,7 +20,7 @@ Route::post( "/login", [ UserController::class, "login" ]);
 Route::get( "/logout", [ UserController::class, "logout" ]);
 Route::get( "/tokens", [ UserController::class, "getTokens" ]);
 
-Route::get( "/clothes", [ClothesController::class, "clothes"]);
+Route::get( "/clothes", [ClothesController::class, "getClothes"]);
 Route::get( "/brand", [ClothesController::class, "brand"]);
 Route::get( "/material", [ClothesController::class, "material"]);
 Route::get( "/type", [ClothesController::class, "type"]);
