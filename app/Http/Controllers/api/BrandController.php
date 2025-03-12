@@ -12,7 +12,6 @@ class BrandController extends ResponseController
     public function newBrand( Request $request ) {
 
         //$request->validated();
-        // hrhrhrhr
         $brand = new Brand();
 
         $brand->brand = $request[ "brand" ];

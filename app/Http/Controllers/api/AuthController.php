@@ -29,7 +29,7 @@ class AuthController extends ResponseController
         }
 
         $user = User::find( $request[ "id" ]);
-        $user->admin = 1;
+        $user->status = 2;
 
         $user->update();
 
@@ -45,7 +45,7 @@ class AuthController extends ResponseController
 
         $user = User::find( $request[ "id" ]);
         $user->name = $request[ "name" ];
-        $user->email = $request[ "email" ];
+        $user->status = $request[ "status" ];
         $user->update();
 
         return $this->sendResponse( $user, "Felhasználó frissítve" );
