@@ -23,12 +23,12 @@ class AppServiceProvider extends ServiceProvider
     {
         Gate::define( "costumer", function( $user ) {
 
-            return $user->status == 2;
+            return $user->status == 1;
         });
 
         Gate::define( "worker", function( $user ) {
 
-            return $user->status == 1;
+            return $user->status == 2;
         });
     }
 }
