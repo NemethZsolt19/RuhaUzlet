@@ -15,7 +15,9 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
+    /**
+     * A vizsgabiztos tuti nézi ezt :DDDDDD.
+     */
     /**
      * Bootstrap any application services.
      */
